@@ -1,14 +1,20 @@
 import React from 'react';
-// import logo from './logo.svg';
+import {
+  BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-
-const Home = require('../src/components/home')
+import Home from '../src/components/home'
+import Login from '../src/components/login'
 
 function App() {
-  return (
-    <div className="App">
-      <Home/>
-    </div>
+  return ( 
+    <Router>
+      <Route path='/' exact> 
+        <Home/>
+      </Route>
+      <Route path='/login' > 
+        <Login/>
+      </Route>
+    </Router>
   );
 }
 

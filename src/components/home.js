@@ -1,3 +1,4 @@
+import React from 'react';
 import Details from "./details";
 
 const Home = () => {
