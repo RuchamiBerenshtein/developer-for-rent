@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navigation from './Navigation';
+import Navigation from './navigation';
 
 // const axios = require('axios').default;
 

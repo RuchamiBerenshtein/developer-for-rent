@@ -1,10 +1,9 @@
-import React from 'react';
 import userIcon from '../imgs/icons/user-icon.svg';
 import '../css/login.css';
 
-// const signIn=()=>{
+const signIn=()=>{
 
-// }
+}
 
 const Login = () => {
     return (

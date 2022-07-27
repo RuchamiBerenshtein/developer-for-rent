@@ -4,13 +4,13 @@ import {
   BrowserRouter as Router, Route
 } from 'react-router-dom';
 // import { Route, Routes } from 'react-router';
-import Home from './components/Home';
-import Login from './components/Login';
-import BusinessDetails from './components/BusinessDetails';
-import Details from './components/Details';
-import Manager from './components/Manager';
-import Schedule from './components/Schedule';
-import ServicesManagement from './components/ServicesManagement';
+import Home from './components/home';
+import Login from './components/login';
+import BusinessDetails from './components/businessDetails';
+import Details from './components/details';
+import Manager from './components/manager';
+import Schedule from './components/schedule';
+import ServicesManagement from './components/servicesManagement';
 function App() {
 
   return (
