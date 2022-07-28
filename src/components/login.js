@@ -7,7 +7,7 @@ const signIn=()=>{
     console.log('signed in!')
 }
 
-const Login = () => {
+export const Login = () => {
     return (
         <div className="body">
             <div className="login-form">
@@ -36,5 +36,3 @@ const Login = () => {
         </div>
     )
 }
-
-export default Login;

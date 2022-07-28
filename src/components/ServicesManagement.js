@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ServicesManagement = () => {
+export const ServicesManagement = () => {
     return (
         <div>
             <div>ServicesManagement!!!</div>
@@ -8,4 +8,3 @@ const ServicesManagement = () => {
     )
 }
 
-export default ServicesManagement;

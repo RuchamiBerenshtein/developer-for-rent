@@ -1,13 +1,12 @@
 import React from 'react';
-import Details from "./details";
+// import { Details } from "./details";
 
-const Home = () => {
+export const Home = () => {
     return (
         <div>
-            <Details />
-            <div>Home!!!</div>
+            {/* <Details /> */}
+            <h1>Home!!!</h1>
         </div>
     )
 }
 
-export default Home;

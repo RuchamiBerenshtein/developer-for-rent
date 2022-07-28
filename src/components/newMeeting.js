@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewMeeting = () => {
+export const NewMeeting = () => {
     return (
         <div>
             <div>NewMeeting!!!</div>
@@ -8,4 +8,3 @@ const NewMeeting = () => {
     )
 }
 
-export default NewMeeting;

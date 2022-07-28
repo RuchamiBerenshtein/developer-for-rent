@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Manager = () => {
+export const Manager = () => {
     return (
         <div>
             <div>Manager!!!</div>
@@ -9,4 +9,3 @@ const Manager = () => {
     )
 }
 
-export default Manager;

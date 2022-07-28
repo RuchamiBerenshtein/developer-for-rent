@@ -1,29 +1,42 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { Navigation } from './navigation';
+import { UserIDContext } from '../context/userContext';
 
-import Navigation from './navigation';
+const axios = require('axios').default;
 
-// const axios = require('axios').default;
 
-// const url = new URL('https://meetings-test.herokuapp.com/business/d1d6012c-d5d5-4dae-afd9-1e8e5ddb27ba')
+const url = new URL('https://meetings-test.herokuapp.com/business/')
 
-// const getDetails = () =>async() => {
-//     try {
-//         const response = await axios.get(url);
-//         console.log(response);
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
+const getDetails = (userID) => async () => {
+    try {
+        const response = await axios.get(url + userID);
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-const Details = () => {
+export const Details = async () => {
+
+    const userID = useContext(UserIDContext);
+
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+
+    // useEffect(async () => {
+    const details = await getDetails(userID);
+    setName(details.name);
+    setDescription(details.description);
+    // }, [name, description])
+
     return (
         <div>
             <Navigation />
-            <div>Details!!!</div>
+            <h1>`${name}`</h1>
+            <h5>`${description}`</h5>
         </div>
 
     )
 }
 
-export default Details;
 
