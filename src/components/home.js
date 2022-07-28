@@ -1,11 +1,12 @@
 import React from 'react';
-import Details from "./details";
+import Navigation from "./navigation";
+import '../css/home.css'
 
 const Home = () => {
     return (
-        <div>
-            <Details />
-            <div>Home!!!</div>
+        <div className="body">
+            <Navigation className="navigation"/>
+            <h1 className="welcome-title">Welcome to Programer4Rent</h1>
         </div>
     )
 }

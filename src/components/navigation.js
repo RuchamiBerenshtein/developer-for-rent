@@ -1,15 +1,16 @@
-import React from 'react';
-// import { Link } from "react-router-dom";
-
+import * as React from 'react';
 import { Link } from "react-router-dom";
+import '../css/navigation.css';
 // import Login from './Login';
 // import Home from './Home';
+
 function Navigation() {
     return (
         <div className="navigation">
-            {/* <Link to={"/products/" + (i + 1)}>{i + 1} </Link> */}
-            <Link to="/login">Login</Link> | {" "}
-            <Link to="/">Home</Link>
+            <nav>
+                <Link to="/login" className="nav-links">manager entrence</Link> | {" "}
+                <Link to="/" className="nav-links">Home page</Link>
+            </nav>
 
             {/* <Routes> */}
                 {/* <Route path="login" element={<Login />} /> */}
