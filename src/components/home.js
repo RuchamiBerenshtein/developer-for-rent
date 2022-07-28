@@ -1,12 +1,15 @@
 import React from 'react';
-// import { Details } from "./details";
+import { Details } from './details';
+import '../css/home.css'
+
 
 export const Home = () => {
+
     return (
-        <div>
-            {/* <Details /> */}
-            <h1>Home!!!</h1>
+        <div className="body" >
+            <Details />
         </div>
     )
 }
+
 

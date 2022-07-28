@@ -1,0 +1,27 @@
+.body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background-image: url("../imgs/background.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-links{
+    font-size:20px;
+    color:black;
+}
+
+h1 {
+    font-size: 250%;
+    font-weight: 600;
+    color: rgb(141,194, 249);
+    margin: 0 20% 8% 20%; 
+  }
+
+  .welcome-title{
+    font-size:50px;
+    font-family: 'Lucida Handwriting';
+    margin-top:2%;
+    margin-bottom: 3%;
+}

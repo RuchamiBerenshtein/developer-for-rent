@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/navigation.css';
 
 export const NewMeeting = () => {
     return (

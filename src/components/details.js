@@ -1,41 +1,34 @@
-import React, { useContext, useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
+import { UserContext } from '../context/User.context';
 import { Navigation } from './navigation';
-import { UserIDContext } from '../context/userContext';
-
-const axios = require('axios').default;
-
 
 const url = new URL('https://meetings-test.herokuapp.com/business/')
 
-const getDetails = (userID) => async () => {
-    try {
-        const response = await axios.get(url + userID);
-        return await response.json();
-    } catch (error) {
-        console.error(error);
-    }
-}
+export const Details = () => {
 
-export const Details = async () => {
+    const [details, setDetails] = useState({})
+    const { userID } = useContext(UserContext);
 
-    const userID = useContext(UserIDContext);
-
-    const [name, setName] = useState('');
-    const [description, setDescription] = useState('');
-
-    // useEffect(async () => {
-    const details = await getDetails(userID);
-    setName(details.name);
-    setDescription(details.description);
-    // }, [name, description])
+    useEffect(() => {
+        async function getBusiness() {
+          try {
+            const res = await axios.get(url + userID);
+            setDetails(res.data);
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        getBusiness();
+      }, []);
 
     return (
         <div>
             <Navigation />
-            <h1>`${name}`</h1>
-            <h5>`${description}`</h5>
+            <h1>{details.name}</h1>
+            <h4>{details.description}</h4>
         </div>
-
     )
 }
 
