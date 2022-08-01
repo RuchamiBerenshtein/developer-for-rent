@@ -8,6 +8,7 @@ export const UserContextProvider = (props) => {
     const businessID = '6be0eade-ee5e-4769-95fa-e92121a7296c';
     const businessURL = new URL('https://meetings-test.herokuapp.com/business/')
     const serviceURL = new URL('https://meetings-test.herokuapp.com/service')
+    const meetingURL = new URL('https://meetings-test.herokuapp.com/meeting')
 
 
     const contextValue = {
@@ -15,6 +16,7 @@ export const UserContextProvider = (props) => {
         businessID,
         businessURL,
         serviceURL,
+        meetingURL,
     };
 
     return <UserContext.Provider value={contextValue}>

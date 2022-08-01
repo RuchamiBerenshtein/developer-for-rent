@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import userIcon from '../imgs/icons/user-icon.svg';
 import '../css/login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,35 +7,36 @@ const axios = require('axios').default;
 const url = new URL('https://meetings-test.herokuapp.com/user/signin')
 
 
-const signIn=(email,password) =>{
-    if(email === '' || password === ''){
+const signIn = (email, password) => {
+    if (email === '' || password === '') {
 
     }
-    else{
-         axios.post(url, {
-           username:email,
-           password:password
-          })
-          .then((response) =>{
-              return response.data;
-          })
-          .then((data) =>{
-            if(data.id){
-                window.location.href="http://localhost:3000/Manager";
-            }
+    else {
+        axios.post(url, {
+            username: email,
+            password: password
         })
-          .catch(function (error) {
-            return error;
-          });
+            .then((response) => {
+                return response.data;
+            })
+            .then((data) => {
+                console.log(data);
+                if (data.id) {
+                    window.location.href = "http://localhost:3000/Manager";
+                }
+            })
+            .catch(function (error) {
+                return error;
+            });
+        console.log('signed in!')
     }
-    console.log('signed in!')
 }
 
 
 export const Login = () => {
 
     const [email, setEmail] = useState('');
-    const [password,setPassword]=useState('');
+    const [password, setPassword] = useState('');
 
     return (
         <div className="body">
@@ -48,13 +49,13 @@ export const Login = () => {
                     <br></br>
                     <div>
                         <div className="form-group">
-                            <input type="email" className="form-control form-input" id="email" placeholder="Enter your Email address" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+                            <input type="email" className="form-control form-input" id="email" placeholder="Enter your Email address" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         <div className="form-group">
-                            <input type="password" className="form-control form-input" id="password" placeholder="Enter your Password" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
+                            <input type="password" className="form-control form-input" id="password" placeholder="Enter your Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
                         </div>
                         <div className="form-group">
-                            <input type="button" className="form-control" id="login" value="Login as a manager" onClick={()=>signIn(email,password)}></input>
+                            <input type="button" className="form-control" id="login" value="Login as a manager" onClick={() => signIn(email, password)}></input>
                         </div>
                     </div>
                 </div>
