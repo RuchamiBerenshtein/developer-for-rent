@@ -1,17 +1,17 @@
+.details{
+    margin-top:5%;
+    font-family: "Poppins", sans-serif;
+}
+
 h1 {
     font-size: 250%;
-    font-weight: 600;
-    color: rgb(141, 194, 249);
-    margin: 0 20% 8% 20%;
-    font-size: 80px;
+    color: rgb(141,194, 249);
+  }
+
+  .title{
+    font-size:50px;
     font-family: 'Lucida Handwriting';
-}
-
-.logo {
-    height: 5%;
-    width: 5%;
-}
-
-menu {
-    margin: 30px;
+    margin-top:2%;
+    margin-bottom: 1%;
+    font-weight: 600;
 }

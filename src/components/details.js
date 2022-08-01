@@ -29,13 +29,10 @@ export const Details = () => {
         <Navigation />
         {/* <img src={details.img} alt="Logo" className='logo'/> */}
       </menu>
-      <header>
-        <h1>{details.businessName}</h1>
-        <h4>{details.description}</h4>
-      </header>
-
-
-
+      <div className="details">
+        <h1 className="title">{details.businessName}</h1>
+        <h1>{details.description}</h1>
+      </div>
       <footer>By {details.ownersName}</footer>
     </div>
   )

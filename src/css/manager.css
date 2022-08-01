@@ -1,9 +1,9 @@
-.body {
+.body-manager {
     font-family: "Poppins", sans-serif;
     height: 100vh;
     background-image: url("../imgs/background.jpg");
     background-size: cover;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
   }
 
@@ -17,11 +17,41 @@ h1 {
     font-weight: 600;
     color: rgb(141,194, 249);
     margin: 0 20% 8% 20%; 
+    margin-top:2%;
+    margin-bottom: 3%;
   }
 
   .welcome-title{
     font-size:50px;
     font-family: 'Lucida Handwriting';
-    margin-top:2%;
-    margin-bottom: 3%;
+    
+}
+
+.btn-container{
+  width:20%;
+  margin:auto;
+}
+
+.container{
+  width:30%;
+  margin-top:5%;
+}
+
+.add-service-disable{
+  display: none;
+}
+
+input{
+  margin-top:3%;
+}
+
+label{
+  margin-top:4%;
+}
+
+.button-a{
+  background-color: Transparent; 
+     background-repeat:no-repeat;
+     border-color: rgb(141,194, 249);
+    border-width: 2px;
 }
