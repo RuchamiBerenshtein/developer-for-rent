@@ -1,0 +1,17 @@
+h1 {
+    font-size: 250%;
+    font-weight: 600;
+    color: rgb(141, 194, 249);
+    margin: 0 20% 8% 20%;
+    font-size: 80px;
+    font-family: 'Lucida Handwriting';
+}
+
+.logo {
+    height: 5%;
+    width: 5%;
+}
+
+menu {
+    margin: 30px;
+}
