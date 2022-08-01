@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { UserContext } from '../context/User.context';
 import { Navigation } from './navigation';
+import '../css/details.css'
 
 const url = new URL('https://meetings-test.herokuapp.com/business/')
 
@@ -26,8 +27,10 @@ export const Details = () => {
     return (
         <div>
             <Navigation />
-            <h1>{details.name}</h1>
-            <h4>{details.description}</h4>
+            <div className="details">
+               <h1 className="title">{details.businessName}</h1>
+               <h1>{details.description}</h1>
+            </div>
         </div>
     )
 }

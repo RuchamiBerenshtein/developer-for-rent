@@ -4,10 +4,12 @@ export const UserContext = React.createContext({});
 
 export const UserContextProvider = (props) => {
     const { children } = props;
-    const userID = 'ff5cad5c-a52c-4793-b753-565a8ca2080f';
+    const userID = '836f4326-4e12-4410-b48c-50a68d9be3b6';
+    const businessID='6be0eade-ee5e-4769-95fa-e92121a7296c';
 
     const contextValue = {
         userID,
+        businessID,
     };
 
     return <UserContext.Provider value={contextValue}>
